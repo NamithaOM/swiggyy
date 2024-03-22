@@ -1,0 +1,239 @@
+
+      <!-- carousel -->
+
+      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img src="/images/3959ad9f670aeeeb.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="/images/420884af69e9b2a0.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="/images/dabf70f117cd3376.webp" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+  <!-- cards--> 
+  <div class="positi align-items-center">
+  <h1 style="padding-left: 50px;padding-top: 50px;">All Products</h1>
+  </div>
+
+  <div class="main">
+      {{#each commodityresult}}
+
+    <div class="a1" >
+          <div class="card" style="width: 13rem;">
+        <img src="/images/{{this.picture}}" class="card-img-top" alt="..." width="15px" height="150px">
+        <div class="card-body">
+          <h5 class="card-title">{{this.newdatas.category}}</h5>
+          <p class="card-text">{{this.description1}} <br> ₹{{this.price}}
+          </p>
+          <a href="singleproduct/{{this._id}}" class="btn btn-primary">View more</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+{{!-- 
+
+    <div class="a2">
+        <div class="card" style="width: 13rem;">
+            <img src="/images/pendrive.webp" class="card-img-top" alt="..." width="15px" height="130px">
+            <div class="card-body">
+              <h5 class="card-title">SanDisk
+              </h5>
+              <p class="card-text">SanDisk Cruze Blade SDCZ50 64 GB Pen Drive  (Red, Black) <br> Rs 449/-
+              </p>
+              <a href="#" class="btn btn-primary">Buy now</a>
+            </div>
+          </div>
+    </div>
+    <div class="a3">
+        <div class="card" style="width: 13rem;">
+            <img src="/images/lap.webp" class="card-img-top" alt="..." width="15px" height="150px">
+            <div class="card-body">
+              <h5 class="card-title">Laptop</h5>
+              <p class="card-text">HP 2023 Intel Core i3 12th Gen 1215U Thin &Light Laptop<br>Rs 38990/-
+                .</p>
+              <a href="#" class="btn btn-primary">Buy now</a>
+            </div>
+          </div>
+    </div>
+    <div class="a4">
+        <div class="card" style="width: 200px;">
+            <img src="/images/mob.webp" class="card-img-top" alt="..." width="5px" height="100px">
+            <div class="card-body">
+              <h5 class="card-title">APPLE iPhone 13 (Midnight, 128 GB)
+              </h5>
+              <p class="card-text">
+                iPhone 13.advanced dual-camera pictures with immaculate clarity <br>Rs 52999/- </p>
+              <a href="#" class="btn btn-primary">Buy now</a>
+            </div>
+          </div>
+    </div>
+    </div>
+   
+    <div class="main2">
+      <div class="a5" >
+            <div class="card" style="width: 13rem;">
+          <img src="/images/shirt.webp" class="card-img-top" alt="..." width="15px" height="150px">
+          <div class="card-body">
+            <h5 class="card-title">Shirts</h5>
+            <p class="card-text">Men Slim Fit Solid Casual Shirt, PMSX16718-W1, Cotton<br> <b>Rs 3999/-</b>
+              .</p>
+            <a href="#" class="btn btn-primary">Buy now</a>
+          </div>
+        </div>
+      </div>
+      <div class="a6">
+          <div class="card" style="width: 13rem;">
+              <img src="/images/saree.webp" class="card-img-top" alt="..." width="15px" height="150px">
+              <div class="card-body">
+                <h5 class="card-title">Saree</h5>
+                <p class="card-text">Embellished Bollywood Georgette Saree  (Pink) <br> <b>Rs 9498/-</b>
+                </p>
+                <a href="#" class="btn btn-primary">Buy now</a>
+              </div>
+            </div>
+      </div>
+      <div class="a7">
+          <div class="card" style="width: 13rem;">
+              <img src="/images/bag.webp" class="card-img-top" alt="..." width="15px" height="150px">
+              <div class="card-body">
+                <h5 class="card-title"> Bags</h5>
+                <p class="card-text">Large 70 L Backpack UNISEX WaterProof Mountain Rucksack <br> <b> Rs 649/-</b>
+                </p>
+                <a href="#" class="btn btn-primary">Buy now</a>
+              </div>
+            </div>
+      </div>
+      <div class="a8">
+          <div class="card" style="width:13rem;">
+              <img src="/images/shoe.webp" class="card-img-top" alt="..." width="15px" height="150px">
+              <div class="card-body">
+                <h5 class="card-title">Shoes</h5>
+                <p class="card-text">Running Shoes For Women  (White) <br><b> Rs 599/-</b>
+
+                </p>
+                <a href="#" class="btn btn-primary">Buy now</a>
+              </div>
+            </div>
+      </div> --}}
+      
+      </div>
+      <div>
+        <h1 style="padding-left: 50px;">All Categories</h1>
+      </div>
+
+      <div class="main3">
+                         {{#each result}}
+
+        <div class="a9" >
+ 
+              <div class="card" style="width: 200px; height: 250px;">
+            <img src="/images/{{this.image}}" class="card-img-top" h="50" alt="..." width="15px" height="150px">
+            <div class="card-body">
+              <h5 class="card-title"style="text-align: center; pt:50px">{{this.category}}</h5>
+              <!-- <p class="card-text">Men Slim Fit Solid Casual Shirt, PMSX16718-W1, Cotton<br> <b>Rs 3999/-</b>
+                .</p> -->
+              <a href="matchproducts/{{this._id}}" class="btn btn-primary"style="margin-left: 35px;">Click here</a>
+            </div>
+          </div>
+        </div>
+               {{/each}}
+
+        {{!-- <div class="a10">
+            <div class="card" style="width:200px; height: 250px;">
+                <img src="/images/laps.jpg" class="card-img-top" alt="..." width="15px" height="150px">
+                <div class="card-body">
+                  <h5 class="card-title"style="text-align: center; padding-top:50">{{this.category}}</h5>
+                  <!-- <p class="card-text">Embellished Bollywood Georgette Saree  (Pink) <br> <b>Rs 9498/-</b>
+                  </p>-->
+                  <a href="#" class="btn btn-primary"style="margin-left: 35px;">Buy now</a>
+                </div>
+              </div>
+        </div>
+        <div class="a11">
+            <div class="card" style="width:200px; height: 250px; ;">
+                <img src="/images/images.jpg" class="card-img-top" alt="..." width="15px" height="150px">
+                <div class="card-body">
+                  <h5 class="card-title"style="text-align: center; padding: top 10px;"> {{this.category}}</h5>
+                  <!-- <p class="card-text">Large 70 L Backpack UNISEX WaterProof Mountain Rucksack <br> <b> Rs 649/-</b>
+                  </p>-->
+                  <a href="#" class="btn btn-primary "style="margin-left: 35px;">Buy now</a> 
+                </div>
+              </div>
+        </div>
+        <div class="a12">
+            <div class="card" style="width: 200px; height: 250px;">
+                <img src="/images/food.jpg" class="card-img-top" alt="..." width="15px" height="150px">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align:center; padding-top: 10px;">{{this.category}}</h5>
+                  <!-- <p class="card-text">Running Shoes For Women  (White) <br><b> Rs 599/-</b>
+  
+                  </p>-->
+                  <a href="#" class="btn btn-primary" style="margin-left: 35px;">Buy now</a> 
+                </div>
+              </div>
+        </div> --}}
+
+        </div>
+        <div>
+
+      {{!-- <div class="about">
+        <div>
+        <table>
+            <tr>
+            <td> <b>ABOUT</b> </td>
+            <td> <b>HELP</b></td>
+            <td><b>CONSUMER POLICY </b></td>
+            <td> <b>SOCIAL</b></td>
+            </tr>
+            <tr>
+                <td>Contact Us</td>
+                <td>Payments</td>
+                <td>Cancellation & returns</td>
+                <td> Facebook</td>
+            </tr>
+            <tr>
+                <td> About Us</td>
+                <td>Shipping</td>
+                <td>terms of Use</td>
+                <td> Twitter</td>
+            </tr>
+            <tr>
+                <td>Careers</td>
+                <td>Cancellation & Returns</td>
+                <td>Security</td>
+                <td>YouTube</td>
+            </tr>
+               <tr>
+                <td style="visibility: hidden;"> ...................................................</td>
+                <td style="visibility: hidden;"> ....................................................</td>
+                <td style="visibility: hidden;"> ....................................................</td>
+                <td style="visibility: hidden;"> ....................................................</td>
+
+            </tr>
+            </table>
+            </div>
+            <div class="ep1">
+            <div class="email">
+              <p> <b>Mail us:</b> Flipcart Internet Private Limited, Building alyssa, begonia& clove embassy tech village outer ring road, devarabeesanahalli village,Bengaluru, 560103 </p>
+              
+              </div>
+              <div class="ph1"> 
+                <p> <b> contact</b> <br> Telephone:044-45614700</p>
+              </div>
+              </div>
+            </div> --}}
+            
+       

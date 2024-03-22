@@ -1,0 +1,31 @@
+
+<div class="home">
+    <div class="sidebar" role="cdb-sidebar" color="pink">
+
+<ul style="none" > <li class="side" >
+          <a  href="/admin/category">Category</a>
+        </li>
+        <li class="side">
+        <a  href="/admin/subcategory">Subcategory</a>
+ 
+        </li>
+        <li class="side">
+        <a href="/admin/commodity">Commodity</a>
+        </li>
+        </ul>
+        </div>
+        <div class="updatesub">
+<form action="" method="post" id="subcategoryupdatefm">
+    <h1 class="head" style="text-align: center;">Update Subcategory</h1> <br>
+    Parent category<select name="catname" id="parentCat" class="form-control">
+        <option value="select">Select</option>
+        {{#each subcatresult}}
+        <option value="{{this.id}}">{{this.category}}</option>
+        {{/each}}
+    </select>
+   Sub category <input type="text" name="subcat" value="{{result.sub_name}}" class="form-control">
+   <button type="submit" style="margin-left: 150px; margin-top:20px;">Update</button>
+
+</form>
+</div>
+</div>

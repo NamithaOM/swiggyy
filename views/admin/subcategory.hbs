@@ -1,0 +1,70 @@
+<div class="home">
+<div class="sidebar" role="cdb-sidebar" color="pink">
+
+
+<ul >
+         <li class="side" >
+          <a  href="/admin/category">Category</a>
+        </li>
+        <li class="side">
+        <a  href="/admin/subcategory">Subcategory</a>
+ 
+        </li>
+        <li class="side">
+        <a href="/admin/commodity">Commodity</a>
+        </li>
+        </ul>
+        </div>
+
+<div class="subcat">
+    <div class="catform">
+<form action="" method="post" id="subcategoryfm">
+    <h2 class="head" style="text-align: center;">Add Subcategory</h2>
+    Parent category <select name="catname" id="parentCat"class="form-control">
+       <option value="select">Select</option> 
+       {{#each result}}
+        <option value="{{this._id}}">{{this.category}}</option>
+        {{/each}}
+    </select> <br>
+    Sub category <input type="text" id="subcategory" name="subcat"class="form-control"placeholder="Enter subategory"> <br>
+    <button type="submit" style="margin-left: 150px;">Submit</button> <br>
+</form>
+</div>
+<div class="subcattbl">
+
+    
+       <div class="row mb-3">
+      <div class="col-3 themed-grid-col"><b>Category</b></div>
+      <div class="col-3 themed-grid-col"><b>Subcategory</b></div>
+     <div class="col-4 themed-grid-col"><b>Action</b></div>
+    </div>
+    {{#each subcatresult}}
+           <div class="row mb-3">
+      <div class="col-3 themed-grid-col">{{this.newdatas.category}}</div>
+      <div class="col-3 themed-grid-col">{{this.sub_name}}</div>
+     {{!-- <div class="col-3 themed-grid-col"><img src="/images/{{this.image}}" alt="" style="height: 100px; width: 100px"></div> --}}
+      <div class="col-2 themed-grid-col"><a href="subcategoryUpdate/{{this._id}}"><button class="btn" style="border-color:gray;">Edit</button></a></div>
+     <div class="col-2 themed-grid-col"><a href="subcategorydelete/{{this._id}}"><button class="btn" style="border-color:gray;">Delete</button></a></div>
+
+    </div>
+    {{/each}}
+{{!-- 
+<table >
+    <tr>
+        <th>Parent Category</th>
+        <th>Sub category</th>
+    </tr>
+    {{#each subcatresult}}
+    <tr>
+    <td>{{this.newdatas.category}}</td>
+    <td>{{this.sub_name}}</td>
+    <td><a href="subcategoryUpdate/{{this._id}}"><button class="btn" style="border-color:gray;">Update</button></a></td>
+    <td><a href="subcategorydelete/{{this._id}}"><button class="btn" style="border-color:gray;">Delete</button></a></td>
+
+     </tr>
+    {{/each}}
+</table>  --}}
+</div>
+</div>
+</div>
+

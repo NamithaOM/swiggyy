@@ -1,0 +1,46 @@
+<style>
+        .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+</style>
+      <div class="container" style="margin-top: 50px;">
+        <div class="left">
+          <form action="" method="post" enctype="multipart/form-data" >
+
+                <img src="/images/{{commodityresult.picture}}" alt="" style="height: 300px;width:300px" >
+                <div class="btn_pro">
+                <button type="submit" class="btn btn-warning" ><a href="/cart/{{commodityresult._id}}">Add to Cart </a></button>
+                {{!-- <button type="submit" class="btn btn-warning" >click</button> --}}
+                <button type="submit" class="btn btn-warning">Buy Now </button>
+            </div>
+        </form>
+
+        </div>
+        <div class="details1 border border-primary" >
+        <div class="tv">
+           <div class="p-2"> <h1>{{commodityresult.product}}</h1> </div>
+          </div>
+          <div class="review">
+            <p>
+              {{commodityresult.description1}}
+            </p>
+          </div>
+          <div class="rate" style="color: red;">
+            <h4>Offer Price ₹ {{commodityresult.price}} </h4>
+            <div class="rating" style="color: green;"> <p><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </p></div>
+        </div>
+        </div>
+        </div>
+      
+
+            
+           
+        
+    
+     
+  

@@ -1,0 +1,45 @@
+<div class="home">
+    <div class="sidebar" role="cdb-sidebar" color="pink">
+
+<ul >
+        <li class="side" >
+          <a  href="/admin/category">Category</a>
+        </li>
+        <li class="side">
+        <a  href="/admin/subcategory" >Subcategory</a>
+ 
+        </li>
+        <li class="side">
+        <a href="/admin/commodity">Commodity</a>
+        </li>
+        </ul>
+        </div>
+<div class="updatecommodity">
+    
+<form action="" method="post" enctype="multipart/form-data" id="subcategoryupdatefm">
+<h1 class="head" style="text-align: center;">Update Commodity</h1> <br>
+    Parent category<select name="catname" id="parentCat"class="form-control">
+                <option value="select">Select</option>
+        {{#each result}}
+        <option value="{{this.id}}">{{this.category}}</option>
+        {{/each}}
+    </select> <br>
+     Sub category<select name="subcat" id="subCat"class="form-control">
+               <option value="select">Select</option>
+        {{#each subcatresult}}
+        <option value="{{this.id}}">{{this.sub_name}}</option>
+        {{/each}}
+    </select> <br>
+   
+    Product <input type="text" id="products" name="product"value="{{commodityresult.product}}" class="form-control"> <br>
+    Quantity <input type="text" id="qty" name="quantity" value="{{commodityresult.qty}}"class="form-control"><br>
+    Price <input type="text" id="prices" name="price" value="{{commodityresult.price}}"class="form-control"> <br>
+    Description <textarea id="description2" name="description1" class="form-control">{{commodityresult.description1}}</textarea> <br>
+    <input type="file" name="picture" value="{{commodityresult.picture}}" class="form-control"> <br> <img src="/images/{{commodityresult.picture}}" alt=""  style=" height: 200px; width: 175px; "> <br> 
+
+   <button type="submit" style="margin-top: 20px; margin-left: 150px;">Update</button>
+
+</form>
+
+</div>
+</div>

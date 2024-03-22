@@ -1,0 +1,54 @@
+<div style="margin-bottom: 50px;">
+
+    <div class="container "
+        style="background-color: white; margin-top: 50px; margin-bottom: 50px; background-attachment: fixed; border: solid; border-color: darkgray;">
+       
+       {{#if cartresult}}
+        {{#each cartresult}}
+
+        <div class="row" style="padding: 20px;">
+
+            <div class="col-4"><img src="/images/{{this.newcartdatas.picture}}" alt="" width="100px" height="150px"></div>
+            <div class="col-7">
+                <div class="detail1">
+                    <div class="des1">
+
+                        <p> {{this.newcartdatas.description1}}</p>
+                        
+                    </div>
+                    <div class="end1">
+                        <div class="price1 " id="amt"
+                            style="height: 40px; width: 150px;background-color:rgb(245, 235, 235) ; text-align: center;padding-top: 5px;">
+                            <p> <b> ₹{{this.newcartdatas.price}}</b> </p>
+                        </div>
+                        <div>
+                           <a href="/cartdelete/{{this._id}}"><button type="button" class="btn btn-danger"><i class="fa-solid fa-minus"></i></button></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                {{/each}}
+
+        <div class="orderbtn" style="display: flex; margin: 30px 200px ">
+            Total price<input type="text" id="total">
+            <button type="button" class="btn btn-lg btn-primary">order Now</button>
+        </div>
+{{else}}
+<h1>Empty cart</h1>
+{{/if}}
+
+</div>
+</div>
+
+<script>
+    let totalamt = 0;
+    const prices = document.querySelectorAll('.price1 b');
+    prices.forEach(price => {
+        totalamt += parseFloat(price.innerText);
+    });
+
+    document.getElementById("total").value = totalamt
+</script>
+
+ 

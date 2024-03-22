@@ -1,0 +1,45 @@
+
+ {{!-- <div class="catform" style="width: 500px; height:200px"> --}}
+   <div class="home">    
+<div class="sidebar" role="cdb-sidebar" color="pink">
+<ul >
+         <li class="side" >
+          <a  href="/admin/category">Category</a>
+        </li>
+        <li class="side">
+        <a  href="/admin/subcategory">Subcategory</a>
+        </li>
+        <li class="side">
+        <a href="/admin/commodity">Commodity</a>
+        </li>
+        </ul>
+        </div>
+<div class="categories">
+    <div class="catform">
+<form action="" method="post" enctype="multipart/form-data" id="categoryfm">
+<h1 class="head" style="text-align: center;">Add Category</h1> <br>
+Enter Category<input type="text" name="catname" placeholder="Enter Category" class="form-control" > <br>
+Description <textArea name="description" placeholder=" Enter Description" id="description"class="form-control" ></textArea> <br>
+Image <input type="file" name="img" class="form-control"><br>
+<button type="submit" style="margin-left: 150px;">Submit</button>
+</form>
+</div>
+<div class="categorytbl" >
+
+       <div class="row mb-3">
+      <div class="col-2 themed-grid-col"><b>Category</b></div>
+      <div class="col-4 themed-grid-col"><b>Description</b></div>
+      <div class="col-2 themed-grid-col"><b>Image</b></div>
+     <div class="col-2 themed-grid-col"><b>Action</b></div>
+    </div>
+    {{#each result}}
+     <div class="row mb-3">
+      <div class="col-2 themed-grid-col">{{this.category}}</div>
+      <div class="col-4 themed-grid-col">{{this.description}}</div>
+     <div class="col-2 themed-grid-col"><img src="/images/{{this.image}}" alt="" style="height: 100px; width: 100px"></div>
+      <div class="col-1 themed-grid-col"><a href="adminUpdate/{{this._id}}"><button class="btn" style="border-color:gray;">Edit</button></a></div>
+     <div class="col-1 themed-grid-col"><a href="admindelete/{{this._id}}"><button class="btn" style="border-color:gray;">Delete</button></a></div>
+    </div>
+    {{/each}}
+</div></div></div></div>
+

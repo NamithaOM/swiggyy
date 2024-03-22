@@ -1,0 +1,201 @@
+
+.navbar{
+background-color:rgb(223, 219, 219);
+}
+body {
+  background-color: rgb(166, 201, 215);
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /* background-color:papayawhip */
+
+  
+}
+ul{
+  list-style-type: none;
+}
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+
+
+.home{
+  display: flex;
+  /* width: 900px; */
+  /* height: 800px; */
+  background-color:whitesmoke
+  /* text-align: center; */
+  /* padding-top: 300px; */
+}
+
+.sidebar{
+  text-decoration: none;
+  width: 150px;
+  background-color:rgb(233, 232, 232)
+
+}
+.catform{
+  
+  width: 500px;
+  margin-left: 250px;
+}
+.subcattbl{
+  margin-top: 50px;
+  margin-left: 200px;
+
+}
+.content{
+width: 800px;
+height: 800px;
+}
+.welcome{
+  
+  padding-top: 250px;
+  font-weight:bolder;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color: rgb(182, 31, 31); 
+   text-shadow: 4px 4px 4px rgb(219, 18, 18);  
+   animation: blinker 1.5s linear infinite;
+
+}
+.categories{
+  margin-top: 50px;
+}
+.categorytbl{
+  margin-left: 20px;
+  margin-top: 50px;
+}
+.subcat{
+  margin-top: 50px;
+}
+.catupdate{
+margin-top: 50px;
+}
+.updatesub{
+  margin-top: 50px;
+align-items: center;
+margin-left: 250px;
+}
+.updatecommodity{
+  margin-top: 50px;
+margin-left: 250px;  
+}
+.commodityform{
+  margin-left: 250px;
+  width: 700px;}
+
+.commodity{
+  width: 1200px;
+ margin-left: 0;
+ margin-top: 50px;
+}  
+
+
+.commoditytbl{
+  margin-left: 10px;
+  width: 1070px;
+  margin-top: 50px;
+}
+
+            
+        .main{
+        display: flex;
+        justify-content: space-evenly;
+        height: 500px;
+        padding-top: 50px;
+    }
+    .a1 .a2 .a3 .a4{
+        /* display: flex;
+        flex-direction: row; */
+        background-color: aqua;
+        height: 100px;
+        width: 50px;
+        
+
+    }
+           
+    .main2{
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+    .a5 .a6 .a7 .a8{
+        /* display: flex;
+        flex-direction: row; */
+        background-color: aqua;
+        height: 100px;
+        width: 50px;
+        padding-top: 30px;
+
+    }
+    .about{
+      padding-left: 30px;
+      padding-top: 30px;
+      padding-right: 30px;
+      height: 200px;
+      background-color: darkgray;
+      display: flex;
+    }
+    .ep1{
+      display: flex;
+    }
+    .email{
+      padding:0px 30px 30px 30px;
+      width: 300PX;
+    }
+    .main3{
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+    .a9 .a10 .a11 .a12{
+        /* display: flex;
+        flex-direction: row; */
+        background-color: aqua;
+        height: 100px;
+        width: 50px;
+        padding-top: 30px;
+
+    }
+     
+
+    
+    .pic{
+        padding: 50px;
+    }
+    .btn_pro{
+        padding: 10px 20px 50px 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .details1{
+        margin: 50px;
+        display: flex;
+        /* justify-content:flex-end ; */
+        flex-direction: column;
+        padding-top: 20px;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .p2{
+        display: flex;
+        justify-content: flex-end;
+
+    }
+    #carouselExampleInterval{
+      margin-top: 10px;
+    }
+    .signin{
+      border: solid gray ;
+      width: 500px;
+      
+      padding: 30px;
+    }
+    .login{
+      border: solid gray ;
+      width: 450px;
+      padding: 30px;
+    }

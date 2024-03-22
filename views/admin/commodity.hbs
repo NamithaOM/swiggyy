@@ -1,0 +1,105 @@
+<div class="home">
+    <div class="sidebar" role="cdb-sidebar" color="pink">
+
+<ul  >
+    
+        <li class="side" >
+          <a  href="/admin/category">Category</a>
+        </li>
+        <li class="side">
+        <a  href="/admin/subcategory">Subcategory</a>
+ 
+        </li>
+        <li class="side">
+        <a href="/admin/commodity">Commodity</a>
+        </li>
+        </ul>
+        </div>
+<div class="commodity">
+
+<div class="commodityform">
+<form action="" method="post" enctype="multipart/form-data" id="commodityfm">
+<h1 class="head" style="text-align: center;">Add Commodity</h1> <br>
+
+    Parent category <select name="catname" id="parentCat" class="form-control">
+         <option value="select">Select</option>
+        {{#each result}}
+        <option value="{{this._id}}">{{this.category}}</option>
+        {{/each}}
+    </select> <br>
+
+    sub category <select name="subcategory" id="subcat" class="form-control">
+        <option value="select">Select</option>
+        {{#each subcatresult}}
+        <option value="{{this._id}}">{{this.sub_name}}</option>
+        {{/each}}
+    </select> <br>
+    Product <input type="text" id="products" name="product" class="form-control" placeholder="Enter product"> <br>
+    Quantity <input type="text" id="qty" name="quantity" class="form-control" placeholder="Enter quantity"><br>
+    Price <input type="text" id="prices" name="price"class="form-control"placeholder="Enter price"> <br>
+    Description <textarea id="description2" name="descriptions"class="form-control"placeholder="Enter description"></textarea> <br>
+    {{!-- Description <input type="text" id="description2" name="descriptions"class="form-control"placeholder="Enter description"> <br> --}}
+    Image <input type="file" id="pic" name="picture"class="form-control"> <br>
+
+    <button type="submit" style="margin-left: 150px;">Submit</button>
+</form>
+</div>
+<div class="commoditytbl">
+    
+       <div class="row mb-3">
+      <div class="col-1 themed-grid-col"><b>Parent Category</b></div>
+      <div class="col-1 themed-grid-col"><b>Sub category</b></div>
+      <div class="col-1 themed-grid-col"><b>Product</b></div>
+     <div class="col-1 themed-grid-col"><b>Quantity</b></div>
+          <div class="col-1 themed-grid-col"><b>Price</b></div>
+     <div class="col-3 themed-grid-col"><b>Description</b></div>
+     <div class="col-2 themed-grid-col"><b>Image</b></div>
+          <div class="col-1 themed-grid-col"><b>Action</b></div>
+
+
+
+    </div>
+    {{#each commodityresult}}
+           <div class="row mb-3">
+      <div class="col-1 themed-grid-col">{{this.newdatas.category}}</div>
+      <div class="col-1 themed-grid-col">{{this.commo_newdt.sub_name}}</div>
+      <div class="col-1 themed-grid-col">{{this.product}}</div>
+     <div class="col-1 themed-grid-col">{{this.qty}}</div>
+     <div class="col-1 themed-grid-col">₹{{this.price}}</div>
+    <div class="col-3 themed-grid-col">{{this.description1}}</div>
+     <div class="col-2 themed-grid-col"><img src="/images/{{this.picture}}" alt="" style="height: 100px; width: 100px"></div>
+      <div class="col-1 themed-grid-col"><a href="commodityUpdate/{{this._id}}"><button class="btn" style="border-color:gray;">Edit</button></a></div>
+     <div class="col-1 themed-grid-col"><a href="commoditydelete/{{this._id}}"><button class="btn" style="border-color:gray;">Delete</button></a></div>
+
+    </div>
+    {{/each}}
+{{!-- <table> 
+    <tr>
+        <th>Parent Category</th>
+        <th>Sub category</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Action</th>
+    </tr>
+    {{#each commodityresult}}
+    <tr>
+    <td>{{this.newdatas.category}}</td>
+    <td>{{this.commo_newdt.sub_name}}</td>
+
+    <td>{{this.product}}</td>
+    <td>{{this.qty}}</td>
+    <td>{{this.price}}</td>
+    <td>{{this.description1}}</td>
+    <td><img src="/images/{{this.picture}}" alt="" style="height: 100px; width: 100px"></td>
+    <td><a href="commodityUpdate/{{this._id}}"><button class="btn" style="border-color:gray;">Update</button></a></td>
+    <td><a href="commoditydelete/{{this._id}}"><button class="btn" style="border-color:gray;">Delete</button></a></td>
+
+     </tr>
+    {{/each}}
+</table> --}}
+</div>
+</div>
+</div>

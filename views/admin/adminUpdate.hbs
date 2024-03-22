@@ -1,0 +1,25 @@
+<div class="home">
+   <div class="sidebar" role="cdb-sidebar" color="pink">
+
+<ul >
+        <li class="side" >
+          <a  href="/admin/category">Category</a>
+        </li>
+        <li class="side">
+        <a  href="/admin/subcategory">Subcategory</a>
+        </li>
+        <li class="side">
+        <a href="/admin/commodity">Commodity</a>
+        </li>
+        </ul>
+        </div>
+        <div class="catupdate">
+<form action="" method="post" enctype="multipart/form-data" style="margin-left: 200px;" id="adminupdatefm">
+<h1 class="head"  style="   text-align: center; "> Update Category</h1> <br>
+   Category <input type="text" name="catname" value="{{result.category}}" style="margin-bottom: 20px;"class="form-control">
+   Description <textarea name="description" class="form-control" style="margin-bottom: 20px;">{{result.description}}</textarea>
+<input type="file" name="img" value="{{result.img}}" style="margin-bottom: 20px;"class="form-control">   <img src="/images/{{result.image}}" alt=""  style=" height: 200px; width: 175px; margin-bottom: 20px;"> <br> 
+   <button type="submit" style="margin-left: 150px;">Update </button>
+</form>
+</div>
+</div>

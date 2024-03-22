@@ -1,0 +1,12 @@
+           {{#each commodityresult}}
+              <div class="card" style="margin:20px 0px; width: 200px; height: 300px;">
+            <img src="/images/{{this.picture}}" style="" h="50" alt="..." width="150px" height="150px">
+            <div class="card-body">
+              <h5 class="card-title"style="text-align: center; pt:50px">{{this.newdatas.category}}</h5>
+              <p class="card-text"> ₹{{this.price}}
+          </p>             
+           <a href="/singleproduct/{{this._id}}" class="btn btn-primary"style="margin-left: 35px;">View more</a>
+             </div></div>
+              {{/each}}
+            </div>
+               
