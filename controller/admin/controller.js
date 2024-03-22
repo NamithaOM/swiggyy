@@ -19,7 +19,8 @@ exports.admn = (req, res) => {
 exports.catdelId = (req, res) => {
     let delcategory = req.params.id
     admindb.then((dbase) => {
-        dbase.collection('catagory').deleteOne({ _id: new mongo.ObjectId(delcategory) }).then((result) => {
+        dbase.collection('catagory').deleteOne({ _id: new mongo.ObjectId(delcategory) })
+        .then((result) => {
             // console.log(result);
             res.redirect('../category')
         })

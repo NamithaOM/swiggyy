@@ -1,0 +1,29 @@
+<style>
+.img1{
+display: flex;
+justify-content: space-between;
+}
+
+</style>
+<div class="lists">     
+       <div class="list1 border border-secondary" style="padding: 10px; margin: 10px 50px;">
+     
+     {{#if cartresult}}
+ {{#each cartresult}}
+
+        <div class="img1" style="width: 200px; padding-left: 20px;"><img src="/images/{{this.newcartdatas.picture}}" alt="" width="130px" height="150px">           
+         <h5 style="padding: 50px 100px;">₹{{this.newcartdatas.price}}</h5>
+</div>
+{{this.newcartdatas.description1}}
+    
+           {{/each}}
+
+           {{else}}
+<h2>No orders!!!!</h2>
+{{/if}} 
+
+        </div>
+        </div>
+
+
+

@@ -23,9 +23,17 @@
         <option value="{{this.id}}">{{this.category}}</option>
         {{/each}}
     </select>
+    <input type="text" value="{{result.category}}" id="hide">
    Sub category <input type="text" name="subcat" value="{{result.sub_name}}" class="form-control">
    <button type="submit" style="margin-left: 150px; margin-top:20px;">Update</button>
 
 </form>
 </div>
 </div>
+
+<script>
+    let a=document.getElementById("parentCat")
+    console.log(a)
+    let b=document.getElementById("hide").value
+    
+</script>

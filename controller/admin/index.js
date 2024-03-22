@@ -32,7 +32,6 @@ router.get('/admindelete/:id',controller.catdelId)
 // findone
 router.get('/adminUpdate/:id',controller.catogoryUpdate)
 // category update
-
 router.post('/adminUpdate/:id',(req,res)=>{
     let editcat= req.params.id
     let updatecat={
@@ -99,7 +98,8 @@ router.post('/subcategoryUpdate/:id', (req, res) => {
         sub_name: req.body.subcat
     }
     admindb.then((dbase) => {
-        dbase.collection('subCategory').updateOne({ _id: new mongo.ObjectId(subcateditId) }, { $set: newsubcat }).then((result) => {
+        dbase.collection('subCategory').updateOne({ _id: new mongo.ObjectId(subcateditId) }, 
+        { $set: newsubcat }).then((result) => {
             // console.log(result);
 
         })

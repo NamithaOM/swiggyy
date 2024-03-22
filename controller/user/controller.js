@@ -98,6 +98,7 @@ exports.matchproduct = (req, res) => {
 exports.signup = (req, res) => {
     res.render('user/signup')
 }
+
 //  login
 exports.login = (req, res) => {
 
@@ -117,16 +118,12 @@ exports.cart = (async (req, res) => {
     if (req.session.user) {
         let admin = false;
         let login = true
-
         let cartId = req.params.id
         let cartData = {
             userid: req.session.user._id,
             productId: cartId,
             status: 0
         }
-        // console.log('cartData');
-
-
         await admindb.then((dbase) => {
             dbase.collection('cart').insertOne(cartData).then((results) => {
                 // console.log(results)
@@ -134,13 +131,9 @@ exports.cart = (async (req, res) => {
             res.redirect('/cart')
         })
     }
-
     else {
-
         res.redirect('/login')
-
     }
-
 })
 
 
@@ -155,7 +148,7 @@ exports.viewcart = (req, res) => {
     admindb.then(async (dbase) => {
         const commodityresult = await dbase.collection('commodity').find({}).toArray()
         const cartresult = await dbase.collection('cart').aggregate([
-            { $match: { userid: req.session.user._id } },
+            { $match: {$and: [{ status: 0 },{ userid: req.session.user._id }] }},
             { "$addFields": { "cartId": { "$toObjectId": "$productId" } } },
             {
                 $lookup:
@@ -197,4 +190,40 @@ else{
 
 }
 }
+
+
+exports.myorder = (req, res) => {
+    if(req.session.user){
+        // const cartuser=req.session.user._id
+
+        let admin=false
+        let login=true
+        // let status=1
+
+    admindb.then(async (dbase) => {
+        const commodityresult = await dbase.collection('commodity').find({}).toArray()
+        const cartresult = await dbase.collection('cart').aggregate([
+            { $match: { $and: [{ status: 1 }, { userid: req.session.user._id }] } },
+
+            { "$addFields": { "cartId": { "$toObjectId": "$productId" } } },
+            {
+                $lookup:
+                {
+                    from: 'commodity',
+                    localField: 'cartId',
+                    foreignField: '_id',
+                    as: "newcartdatas"
+                }
+            }, { $unwind: '$newcartdatas' }
+                ]).toArray();
+                console.log(cartresult)
+         res.render('user/order', { commodityresult, cartresult,login,admin })
+       
+    })
+}
+else
+{
+    res.redirect('../login')
+
+}}
 

@@ -12,12 +12,7 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
-app.engine( 'hbs', hbs.engine( { 
-  extname: 'hbs', 
-  defaultLayout: 'layout', 
-  layoutsDir: __dirname + '/views/layout/',
-  partialsDir: __dirname + '/views/partials/'
-} ) );
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -41,6 +36,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// file upload midileware static is using
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(expressFileupload());
 // app.use(hbs());
