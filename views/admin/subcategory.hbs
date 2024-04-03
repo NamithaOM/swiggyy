@@ -20,8 +20,8 @@
     <div class="catform">
 <form action="" method="post" id="subcategoryfm">
     <h2 class="head" style="text-align: center;">Add Subcategory</h2>
-    Parent category <select name="catname" id="parentCat"class="form-control">
-       <option value="select">Select</option> 
+    Parent category <select name="catname" id="parent"class="form-control">
+       {{!-- <option value="select">Select</option>  --}}
        {{#each result}}
         <option value="{{this._id}}">{{this.category}}</option>
         {{/each}}

@@ -19,18 +19,21 @@
 <form action="" method="post" enctype="multipart/form-data" id="subcategoryupdatefm">
 <h1 class="head" style="text-align: center;">Update Commodity</h1> <br>
     Parent category<select name="catname" id="parentCat"class="form-control">
-                <option value="select">Select</option>
+                {{!-- <option >Select</option> --}}
         {{#each result}}
-        <option value="{{this.id}}">{{this.category}}</option>
+        <option value="{{this._id}}">{{this.category}}</option>
         {{/each}}
     </select> <br>
+        <input type="hidden" value="{{commodityresult.parent_category}}" id="hide1">
+
      Sub category<select name="subcat" id="subCat"class="form-control">
-               <option value="select">Select</option>
+               {{!-- <option >Select</option> --}}
         {{#each subcatresult}}
-        <option value="{{this.id}}">{{this.sub_name}}</option>
+        <option value="{{this._id}}">{{this.sub_name}}</option>
         {{/each}}
     </select> <br>
-   
+       <input type="hidden" value="{{commodityresult.sub_category}}" id="hide2">
+
     Product <input type="text" id="products" name="product"value="{{commodityresult.product}}" class="form-control"> <br>
     Quantity <input type="text" id="qty" name="quantity" value="{{commodityresult.qty}}"class="form-control"><br>
     Price <input type="text" id="prices" name="price" value="{{commodityresult.price}}"class="form-control"> <br>
@@ -41,5 +44,33 @@
 
 </form>
 
+ <script>
+    let parentCatDt=document.getElementById("parentCat")
+        console.log(parentCatDt)
+
+    let selectDt1=document.getElementById("hide1").value
+        console.log(selectDt1)
+        for(let i=0; i<parentCatDt.options.length;i++){
+            let option=parentCatDt.options[i]
+            if(option.value==selectDt1){
+                option.selected=true
+                break;
+            }
+        }
+
+         let subCatDt=document.getElementById("subCat")
+        console.log(subCatDt)
+
+    let selectDt2=document.getElementById("hide2").value
+        console.log(selectDt2)
+        for(let i=0; i<subCatDt.options.length;i++){
+            let option=subCatDt.options[i]
+            if(option.value==selectDt2){
+                option.selected=true
+                break;
+            }
+        } 
+
+</script>
 </div>
 </div>
